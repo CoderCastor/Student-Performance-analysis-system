@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Dongle", sans-serif;
+    font-family: "Montserrat", sans-serif; heading*/
+}
+
+body{
+    background-image: linear-gradient(to right top, #25554f, #004e5c, #004569, #0f366b, #451d5a);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mainSection{
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0% 1%;
+}
+
+.leftPart{
+    height: 90%;
+    width: 50%;
+
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftPart img{
+    height: 95%;
+    width: 95%;   
+}
+
+.rightPart{
+
+    /* background-color: red; */
+
+    height: 80%;
+    width: 60%;
+    padding: 2%;
+
+    color: rgb(0, 0, 0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mainHeading{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+
+    font-weight: 600;
+    text-align: center;
+
+    
+}
+
+.description{
+    font-family: "Montserrat", sans-serif;
+
+    height: 10%;
+    width: 80%;
+    font-size: 0.8rem;
+
+    padding: 6%;
+    text-align: center;
+    font-weight: 900;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+
+    height: 20%;
+    width: 80%;
+    padding: 1%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+
+    cursor: pointer;
+    /* flex-grow: 1; */
+}
+
+.btns{
+    
+    
+    border: 2px solid rgb(72, 0, 255);
+
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+
+}
+
+.rightPart p{
+    margin: 1% 0%;;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+.rightPart span{
+    color: blue;
+    font-weight: 600;
+}
+
+.btn1{
+    background-image: linear-gradient(to right top, #25554f, #004e5c, #004569, #0f366b, #451d5a);
+
+    color: white;
+    border: none;
+}
