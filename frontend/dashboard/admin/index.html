@@ -11,32 +11,77 @@
 <body>
 
     <nav>
-        <div class="hamBerger jsWidth">
-
-            <div class="hambergerIcon">
-                <i class="fas fa-bars icon"></i>
-            </div>
+        <div class="hamBerger">
             
+            <div  class="hambergerIcon">
+                <img src="../../../assets/hamburger.png" id="hamBurger" alt="" srcset="">
+            </div>
+        
+            <div class="leftArrow">
+                <i class="fa fa-arrow-left" style="color: white;"></i>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <h2>Admin Dashboard</h2>
+            <div class="profile"><i class="fa fa-user user"></i></div>
         </div>
 
     </nav>
-    <div class="leftBar jsWidth">
-        <div class="options">
-            <div class="option" id="option1"><div class="icons"><i class="fa fa-home homeIcon" aria-hidden="true"></i></div><h3>Home</h3></div>
-            <div class="option" id="option2"><div class="icons"><i class="fas fa-book classIcon" aria-hidden="true"></i></div><h3>Classes</h3></div>
-            <div class="option" id="option3"><div class="icons"><i class="fas fa-clipboard-list subjectIcon" aria-hidden="true"></i></div><h3>Subjects</h3></div>
-            <div class="option" id="option4"><div class="icons"><i class="fas fa-user-friends"></i></div><h3>Teachers</h3></div>
-            <div class="option" id="option5"><div class="icons"><i class="fas fa-user"></i></div><h3>Students</h3></div>
-            <div class="option" id="option6"><div class="icons"><i class="fas fa-comment-alt"></i></div><h3>Notices</h3></div>
-            <div class="option" id="option7"><div class="icons"><i class="fas fa-exclamation-circle"></i></div><h3>Complaints</h3></div>
+    <main>
+        <div class="leftBar">
+            <div class="options">
+                <div class="option" id="option1"><div class="icons"><i class="fa fa-home homeIcon" aria-hidden="true"></i></div><h3>Home</h3></div>
+                <div class="option" id="option2"><div class="icons"><i class="fas fa-book classIcon" aria-hidden="true"></i></div><h3>Classes</h3></div>
+                <div class="option" id="option3"><div class="icons"><i class="fas fa-clipboard-list subjectIcon" aria-hidden="true"></i></div><h3>Subjects</h3></div>
+                <div class="option" id="option4"><div class="icons"><i class="fas fa-user-friends"></i></div><h3>Teachers</h3></div>
+                <div class="option" id="option5"><div class="icons"><i class="fas fa-user"></i></div><h3>Students</h3></div>
+                <div class="option" id="option6"><div class="icons"><i class="fas fa-comment-alt"></i></div><h3>Notices</h3></div>
+                <div class="option" id="option7"><div class="icons"><i class="fas fa-exclamation-circle"></i></div><h3>Complaints</h3></div>
+            </div>
+    
+            <hr>
+    
+            <div class="userBar">
+    
+            </div>
         </div>
 
-        <hr>
+        <section>
 
-        <div class="userBar">
+            <div class="cards">
 
-        </div>
-    </div>
-     
+                <div class="box" id="box1">
+                    <div class="cardImage"><img src="../../../assets/img1.png" alt="" srcset=""></div>
+                    <div class="cardtitle"><h2>Total Students</h2></div>
+                    <div class="PHP">00</div>
+                </div>
+                <div class="box" id="box2">
+                    <div class="cardImage"><img src="../../../assets/img2.png" alt="" srcset=""></div>
+                    <div class="cardtitle"><h2>Total Classes</h2></div>
+                    <div class="PHP">00</div>
+                </div>
+                <div class="box" id="box3">
+                    <div class="cardImage"><img src="../../../assets/img3.png" alt="" srcset=""></div>
+                    <div class="cardtitle"><h2>Total Teachers</h2></div>
+                    <div class="PHP">00</div>
+                </div>
+                <div class="box" id="box4">
+                    <div class="cardImage"><img src="../../../assets/img4.png" alt="" srcset=""></div>
+                    <div class="cardtitle"><h2>Fees Collection</h2></div>
+                    <div class="PHP">00</div>
+                </div>
+
+            </div>
+
+            <div class="noticeDisplay">
+                <div class="noticebar">Notices</div>
+                <div class="noticeItems">No Notices to Show Right Now</div>
+            </div>
+
+        </section>
+
+    </main>
+     <script src="./adminDashboard.js"></script>
 </body>
 </html>
