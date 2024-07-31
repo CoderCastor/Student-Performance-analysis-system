@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: black; */
+    height: 100vh;
+    display: flex;
+
+    flex-direction: column;
+}
+
+nav{
+    background-image: linear-gradient(to right top, #25554f, #004e5c, #004569, #0f366b);
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+}
+
+.hamBerger{
+
+    background-color: #024f5b22;
+
+    width: 73px;
+    height: 100%;
+
+    padding:0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s;
+}
+
+.hambergerIcon{
+
+    height: 38px;
+    width: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: #ffffff;
+
+}
+
+#hamBurger{
+    /* background-color: red; */
+
+    height: 60%;
+    width: 60%;
+}
+.leftArrow{
+    background-color: #21554f;
+
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    align-self: flex-end;
+    display: none;
+}
+
+.leftArrowShow{
+    display: flex;
+}
+
+.icon{
+    color: white;
+    transform: scale(1.4);
+}
+
+.leftBar{
+
+    background-color: #eeeeee55;
+
+    height: 100%;
+    width: 73px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif;
+
+    transition: all 0.4s;
+
+
+}
+
+.jsWidth{
+    width: 250px;
+    transition: all 0.4s;
+}
+.labelNone{
+    display: block;
+    font-size: 16px;
+    padding: 4px;
+    width: 50%;
+    transition: all 0.4;
+    /* transition-delay: 1s; */
+}
+
+.hamBergerNone{
+    display: none;
+}
+
+.options{
+
+    width: 100%;
+    height: 50%;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+}
+
+.icons{
+    background: rgba(143, 255, 143, 0.411);
+
+    height: 38px;
+    width: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.option{
+    /* background-color: red; */
+
+    width: 90%;
+    height: 13%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    
+
+    border-radius: 12px;
+}
+
+.option:hover{
+    
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: bgc;
+    animation-duration: .4s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes bgc {
+    0%{
+        background-color: #ffffff;
+        color: black;
+    }
+    100%{
+        background-color: #318491;;
+        color: #ffffff;
+    }
+    
+}
+
+h3{
+    
+    padding: 0px;
+    width: 0%;
+    text-align: left;
+
+    font-size: 0px;
+    display: none;
+}
+
+i{
+    transform: scale(1.3);
+}
+
+hr{
+    width: 100%;
+}
+
+.navigation{
+    
+    /* background-color: red; */
+    /* width: 88%; */
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2%;
+    
+}
+
+.navigation h2{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.profile{
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+}
+
+/* HOME SECTION */
+.section1{
+    flex-grow: 1;
+    /* background-color: black; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1% 0%;
+    gap: 2%;
+}
+
+.cards{
+    /* background-color: red; */
+
+    padding: 1% 0%;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1%;
+
+    height: 30%;
+    width: 60%;
+}
+
+.box{
+    height: 100%;
+    /* width: 100px; */
+
+    flex-grow: 1;
+    background-color: rgb(242, 245, 255);
+    border-radius: 8px;
+    padding: 1%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.cardImage img{
+    height: 80px;
+}
+.cardtitle{
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 250px;
+    height: 2rem; */
+}
+.cardtitle h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+.PHP{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 33px;
+}
+
+.noticeDisplay{
+    background-color: rgba(221, 221, 247, 0.595);
+
+    height: 40%;
+    width: 60%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.noticebar{
+    background-color: rgba(0, 0, 127, 0.688);
+    
+    width: 100%;
+    height: 18%;
+    
+    display: flex;
+    align-items: center;
+    padding: 0% 5%;
+
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+
+}
+
+.noticeItems{
+
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* CLASS SECTION */
+.section2{
+    /* background-color: red; */
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.classTitileBar{
+    
+    color: white;
+    font-family: "Montserrat", sans-serif;
+
+    background-color: rgb(0, 0, 0);
+    height: 7%;
+    width: 100%;
+
+    display: flex;
+}
+
+.titleClassName{
+
+
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0% 4%;
+
+
+}
+
+.titleAciton{
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ClassEntry{
+    /* background-color: red; */
+
+    flex-grow: 1;
+    padding: 0.4%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.entry{
+
+    background-color: #fff;
+
+    height: 9%;
+    width: 100%;
+    margin: 0.3% 0%;
+
+    display: flex;
+
+}
+
+.entryClassName{
+    background-color: rgb(244, 245, 253);
+
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0% 4.5%;
+}
+
+.classAlpla{
+    width: 30px;
+    height: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+
+
+}
+
+.actionBar{
+
+    background-color: rgb(244, 245, 253);
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+
+}
+
+.buttons{
+
+    background-color: #fff;
+
+    height: 60%;
+    width: 10%;
+
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+
+    cursor: pointer;
+
+}
+
+#addButton:hover{
+    background-color: #ffc003;
+    color: white;
+}
+
+#VIEW{
+    background-color: rgba(0, 0, 32, 0.89);
+    color: white;
+}
+
+#VIEW:hover{
+    background-color: rgba(0, 0, 72, 0.725);
+}
+
+.dustbinIcon{
+    height: 43px;
+    width: 43px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dustbinIcon:hover{
+    background-color: #fff;
+}
+
+.trashIcon{
+    color: red;
+}
+
+#arroIcon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: black;
+}
+
+#arroIcon:hover{
+    background-color: red;
+}
+
+.displayNone{
+    display: none;
+}
+
+#addSubjectButton,#addStudentButton{
+    background-color: white;
+    font-size: small;
+    width: 12%;
+}
+
+#addStudentButton:hover{
+    background-color: #ff7d03;
+    color: white;
+}
+
+#addSubjectButton:hover{
+    background-color: #ff3e03;
+    color: white;
+}
