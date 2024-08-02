@@ -34,3 +34,6 @@ leftArrow.addEventListener("click",()=>{
     hamBerger.style.backgroundColor = "#024f5b22";
 
 })
+
+
+

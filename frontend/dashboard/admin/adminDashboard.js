@@ -75,3 +75,57 @@ arroIcon.forEach(button => {
 })
 
 
+//all options
+let option1 = document.querySelector("#option1");
+let option2 = document.querySelector("#option2");
+let option3 = document.querySelector("#option3");
+let option4 = document.querySelector("#option4");
+let option5 = document.querySelector("#option5");
+let option6 = document.querySelector("#option6");
+let option7 = document.querySelector("#option7");
+
+// all sections
+let section1 = document.querySelector(".section1");
+
+let section2 = document.querySelector(".section2");
+let subSection2 = document.querySelector(".addClassModal");
+
+let section3 = document.querySelector(".section3");
+let section4 = document.querySelector(".section4");
+let section5 = document.querySelector(".section5");
+let section6 = document.querySelector(".section6");
+let section7 = document.querySelector(".section7");
+
+section2.classList.add('class');
+option1.classList.add('lablelogoRed');
+
+option1.addEventListener("click",()=>{
+
+    option1.classList.add('lablelogoRed');
+    option2.classList.remove('lablelogoRed');
+
+    section1.classList.remove('class');
+    section2.classList.add('class');  
+})
+
+option2.addEventListener("click",()=>{
+
+    option1.classList.remove('lablelogoRed');
+    option2.classList.add('lablelogoRed');
+
+    section1.classList.add('class');
+    section2.classList.remove('class');
+})
+
+let addClass =document.querySelector(".addClass");
+let goBack = document.querySelector("#addClassButton2");
+
+subSection2.style.display="none";
+addClass.addEventListener("click",()=>{
+    subSection2.style.display="flex";
+    addClass.style.backgroundColor="black";
+})
+goBack.addEventListener("click",()=>{
+    subSection2.style.display="none";
+    addClass.style.backgroundColor="red";
+})
