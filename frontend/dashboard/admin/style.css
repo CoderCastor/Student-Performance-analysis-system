@@ -668,16 +668,7 @@ main{
 }
 
 
-@keyframes modalAnimation {
-    from{
-        /* height: 0%; */
-        transform: scale(.4);
-    }
-    to{
-        /* height: 100%; */
-        transform: scale(1);
-    }
-}
+
 
 
 .addClassImg{
@@ -718,6 +709,203 @@ main{
 }
 
 #addClassButton1{
+    background-color: rgb(0, 0, 109);
+    color: white;
+}
+
+
+
+/* addSubject Modal */
+.addSubjectModal{
+
+
+    position: absolute;
+
+
+    background: transparent;
+    background-color: #00000040;
+
+
+    height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* backdrop-filter: brightness(50%); */
+    /* backdrop-filter: ; */
+
+    z-index: 11;
+}
+
+.addSubjectModalBox{
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    box-shadow: black 8px 8px 20px;
+
+    border-radius: 12px;
+    height: 550px;
+    width: 550px;
+    padding: 20px;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    animation-name: modalAnimation;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+}
+
+.addSubjectModalImg{
+    height: 150px;
+}
+
+.addSubjectModalImg img{
+    height: 100%;
+    width: 100%;
+}
+
+.addSubjectModalinput{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+
+    padding: 10px;
+    height: 45px;
+    width: 70%;
+
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: rgb(237, 232, 255);
+
+    border-radius: 12px;
+}
+
+
+.addSubjectModalButton{
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+
+    height: 45px;
+    width: 70%;
+    border-radius: 12px;
+    border: none;
+
+    cursor: pointer;
+}
+
+#addSubjectModalButton{
+    background-color: rgb(0, 0, 109);
+    color: white;
+}
+
+/* Add Student Modal Started Here */
+.addStudentModal{
+    position: absolute;
+
+
+    background: transparent;
+    background-color: #00000040;
+
+
+    height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* backdrop-filter: brightness(50%); */
+    /* backdrop-filter: ; */
+
+    z-index: 11;
+}
+
+.addStudentModalBox{
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    box-shadow: black 8px 8px 20px;
+
+    border-radius: 12px;
+    height: 550px;
+    width: 550px;
+    z-index: 10;
+
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    animation-name: modalAnimation;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes modalAnimation {
+    from{
+        transform: scale(.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.addStudentModalImg{
+    height: 150px;
+}
+
+.addStudentModalImg img{
+    height: 100%;
+    width: 100%;
+}
+
+.addStudentModalinput{
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+
+    padding: 10px;
+    height: 45px;
+    width: 70%;
+
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: rgb(237, 232, 255);
+
+    border-radius: 12px;
+
+}
+.addStudentModalButton{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+
+    height: 45px;
+    width: 70%;
+    border-radius: 12px;
+    border: none;
+
+    cursor: pointer;
+}
+
+#addStudentModalButton{
     background-color: rgb(0, 0, 109);
     color: white;
 }

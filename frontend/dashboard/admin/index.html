@@ -101,7 +101,21 @@
 
             <div class="ClassEntry">
 
-                <div class="entry">
+                <div class="entry" id="1">
+                    <div class="entryClassName">
+                        <div class="classAlpla">A</div>
+                    </div>
+                    <div class="actionBar" >
+                        <div class="dustbinIcon current"><i class="fa fa-trash trashIcon" aria-hidden="true"></i></div>    
+                        <button class="buttons current" id="VIEW">VIEW</button>
+                        <button class="buttons current addButton" id="addButton">Add +</button>
+                        <button class="buttons future displayNone addSubjectButton" id="addSubjectButton">ADD SUBJECT</button>
+                        <button class="buttons future displayNone addStudentButton" id="addStudentButton">ADD STUDENT</button>
+                        <button class="buttons future displayNone arroIcon" id="arroIcon"><i class="fa fa-arrow-left" style="color: white;"></i></button>
+                    </div>
+                </div>
+
+                <div class="entry" id="2">
                     <div class="entryClassName">
                         <div class="classAlpla">A</div>
                     </div>
@@ -109,56 +123,12 @@
                         <div class="dustbinIcon current"><i class="fa fa-trash trashIcon" aria-hidden="true"></i></div>    
                         <button class="buttons current" id="VIEW">VIEW</button>
                         <button class="buttons current addButton" id="addButton">Add +</button>
-                        <button class="buttons future displayNone" id="addSubjectButton">ADD SUBJECT</button>
-                        <button class="buttons future displayNone" id="addStudentButton">ADD STUDENT</button>
+                        <button class="buttons future displayNone addSubjectButton" id="addSubjectButton">ADD SUBJECT</button>
+                        <button class="buttons future displayNone addStudentButton" id="addStudentButton">ADD STUDENT</button>
                         <button class="buttons future displayNone arroIcon" id="arroIcon"><i class="fa fa-arrow-left" style="color: white;"></i></button>
                     </div>
                 </div>
-
-                <div class="entry">
-                    <div class="entryClassName">
-                        <div class="classAlpla">A</div>
-                    </div>
-                    <div class="actionBar">
-                        <div class="dustbinIcon current"><i class="fa fa-trash trashIcon" aria-hidden="true"></i></div>    
-                        <button class="buttons current" id="VIEW">VIEW</button>
-                        <button class="buttons current addButton" id="addButton">Add +</button>
-                        <button class="buttons future displayNone" id="addSubjectButton">ADD SUBJECT</button>
-                        <button class="buttons future displayNone" id="addStudentButton">ADD STUDENT</button>
-                        <button class="buttons future displayNone arroIcon" id="arroIcon"><i class="fa fa-arrow-left" style="color: white;"></i></button>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entryClassName">
-                        <div class="classAlpla">A</div>
-                    </div>
-                    <div class="actionBar">
-                        <div class="dustbinIcon current"><i class="fa fa-trash trashIcon" aria-hidden="true"></i></div>    
-                        <button class="buttons current" id="VIEW">VIEW</button>
-                        <button class="buttons current addButton" id="addButton">Add +</button>
-                        <button class="buttons future displayNone" id="addSubjectButton">ADD SUBJECT</button>
-                        <button class="buttons future displayNone" id="addStudentButton">ADD STUDENT</button>
-                        <button class="buttons future displayNone arroIcon" id="arroIcon"><i class="fa fa-arrow-left" style="color: white;"></i></button>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entryClassName">
-                        <div class="classAlpla">A</div>
-                    </div>
-                    <div class="actionBar">
-                        <div class="dustbinIcon current"><i class="fa fa-trash trashIcon" aria-hidden="true"></i></div>    
-                        <button class="buttons current" id="VIEW">VIEW</button>
-                        <button class="buttons current addButton" id="addButton">Add +</button>
-                        <button class="buttons future displayNone" id="addSubjectButton">ADD SUBJECT</button>
-                        <button class="buttons future displayNone" id="addStudentButton">ADD STUDENT</button>
-                        <button class="buttons future displayNone arroIcon" id="arroIcon"><i class="fa fa-arrow-left" style="color: white;"></i></button>
-                    </div>
-                </div>
-
-
-                
+             
               
             </div>
 
@@ -187,7 +157,37 @@
         </div>
     </div>
 
-    
+
+    <!-- //addSubject Modal -->
+    <div class="addSubjectModal" id="addSubjectModal">
+        <div class="addSubjectModalBox">
+            <div class="addSubjectModalImg">
+                <img src="../../../assets/classroom.png" alt="">
+            </div>
+            <input type="text" class="addSubjectModalinput" name="" id="" placeholder="Subject Name">
+            <input type="text" class="addSubjectModalinput" name="" id="" placeholder="Subject Code">
+            <input type="text" class="addSubjectModalinput" name="" id="" placeholder="Sessions">
+            <button class="addSubjectModalButton" id="addSubjectModalButton">ADD SUBJECT</button>
+            <button class="addSubjectModalButton" id="addSubjectModalButtonBack">GO BACK</button>
+        </div>
+    </div>
+
+
+
+    <!-- //add Student Modal -->
+    <div class="addStudentModal" id="addStudentModal">
+        <div class="addStudentModalBox">
+            <div class="addStudentModalImg">
+                <img src="../../../assets/classroom.png" alt="">
+            </div>
+            <input type="text" class="addStudentModalinput" name="" id="" placeholder="Student Name">
+            <input type="text" class="addStudentModalinput" name="" id="" placeholder="Student Key / ID">
+            <!-- <input type="text" class="addStudentModalinput" name="" id="" placeholder="Roll No."> -->
+            <button class="addStudentModalButton" id="addStudentModalButton">ADD STUDENT</button>
+            <button class="addStudentModalButton" id="addStudentModalButtonGoBack">GO BACK</button>
+        </div>
+    </div>
+
 
      <script src="./adminDashboard.js"></script>
 </body>

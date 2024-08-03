@@ -26,54 +26,6 @@ leftArrow.addEventListener("click", function () {
   hamBerger.style.backgroundColor = "#024f5b22";
 });
 
-//entry
-let addButton = document.querySelectorAll(".addButton");
-let currentButton = document.querySelectorAll(".current");
-let futureButton = document.querySelectorAll(".future");
-let arroIcon = document.querySelectorAll(".arroIcon");
-
-addButton.forEach(button => {
-    button.addEventListener("click",(e)=>{
-
-        e.preventDefault();
-
-        const entryDiv = button.parentElement;
-
-        const future = entryDiv.querySelectorAll(".future");
-        const current = entryDiv.querySelectorAll(".current");
-
-        if(future){
-            future.forEach(btn => {
-                btn.classList.remove('displayNone');
-            })
-            current.forEach(btn => {
-                btn.classList.add('displayNone');
-            })
-        }
-    })
-})
-
-arroIcon.forEach(button => {
-    button.addEventListener("click",(e)=>{
-
-        e.preventDefault();
-
-        const entryDiv = button.parentElement;
-
-        const future = entryDiv.querySelectorAll(".future");
-        const current = entryDiv.querySelectorAll(".current");
-
-        if(future){
-            future.forEach(btn => {
-                btn.classList.add('displayNone');
-            })
-            current.forEach(btn => {
-                btn.classList.remove('displayNone');
-            })
-        }
-    })
-})
-
 
 //all options
 let option1 = document.querySelector("#option1");
@@ -86,46 +38,144 @@ let option7 = document.querySelector("#option7");
 
 // all sections
 let section1 = document.querySelector(".section1");
-
 let section2 = document.querySelector(".section2");
-let subSection2 = document.querySelector(".addClassModal");
-
 let section3 = document.querySelector(".section3");
 let section4 = document.querySelector(".section4");
 let section5 = document.querySelector(".section5");
 let section6 = document.querySelector(".section6");
 let section7 = document.querySelector(".section7");
 
-section2.classList.add('class');
-option1.classList.add('lablelogoRed');
 
-option1.addEventListener("click",()=>{
 
-    option1.classList.add('lablelogoRed');
-    option2.classList.remove('lablelogoRed');
+section2.classList.add("class");
+option1.classList.add("lablelogoRed");
 
-    section1.classList.remove('class');
-    section2.classList.add('class');  
-})
+option1.addEventListener("click", () => {
+  option1.classList.add("lablelogoRed");
+  option2.classList.remove("lablelogoRed");
 
-option2.addEventListener("click",()=>{
+  section1.classList.remove("class");
+  section2.classList.add("class");
+});
 
-    option1.classList.remove('lablelogoRed');
-    option2.classList.add('lablelogoRed');
+option2.addEventListener("click", () => {
+  option1.classList.remove("lablelogoRed");
+  option2.classList.add("lablelogoRed");
 
-    section1.classList.add('class');
-    section2.classList.remove('class');
-})
+  section1.classList.add("class");
+  section2.classList.remove("class");
+});
 
-let addClass =document.querySelector(".addClass");
+//Modals addClassModal
+let subSection2 = document.querySelector(".addClassModal");
+let addClass = document.querySelector(".addClass");
 let goBack = document.querySelector("#addClassButton2");
 
-subSection2.style.display="none";
-addClass.addEventListener("click",()=>{
-    subSection2.style.display="flex";
-    addClass.style.backgroundColor="black";
-})
-goBack.addEventListener("click",()=>{
-    subSection2.style.display="none";
-    addClass.style.backgroundColor="red";
-})
+subSection2.style.display = "none";
+addClass.addEventListener("click", () => {
+  subSection2.style.display = "flex";
+  addClass.style.backgroundColor = "black";
+});
+goBack.addEventListener("click", () => {
+  subSection2.style.display = "none";
+  addClass.style.backgroundColor = "red";
+});
+
+
+
+//entry
+let addButton = document.querySelectorAll(".addButton");
+let currentButton = document.querySelectorAll(".current");
+let futureButton = document.querySelectorAll(".future");
+let arroIcon = document.querySelectorAll(".arroIcon");
+
+//add Student Modal body
+let addStudentModal = document.querySelector("#addStudentModal")
+let addStudentModalButtonGoBack = document.querySelector("#addStudentModalButtonGoBack")
+addStudentModal.style.display="none";
+console.log(addStudentModal);
+
+//add subject modal body
+let addSubjectModal = document.querySelector("#addSubjectModal")
+let addSubjectModalButtonBack = document.querySelector("#addSubjectModalButtonBack")
+addSubjectModal.style.display="none";
+// addSubjectModal.style.display="flex";
+console.log(addSubjectModal);
+
+
+
+//shift to addsubject and addstudents buttons
+addButton.forEach((button) => {  
+    button.addEventListener("click", (e) => {
+        e.preventDefault();       
+        const entryDiv = button.parentElement;
+        const future = entryDiv.querySelectorAll(".future");
+        const current = entryDiv.querySelectorAll(".current");      
+    if (future) {
+      future.forEach((btn) => {
+        btn.classList.remove("displayNone");
+      });
+      current.forEach((btn) => {
+        btn.classList.add("displayNone");
+      });
+    }
+
+    //ADD Student Modal
+    const addStudentButton = entryDiv.querySelector("#addStudentButton");
+        addStudentButton.addEventListener("click",()=>{
+            addStudentModal.style.display="flex";
+            addStudentButton.style.backgroundColor="green";
+            addStudentButton.style.color="white";
+
+        })
+        addStudentModalButtonGoBack.addEventListener("click",()=>{
+            addStudentModal.style.display="none";
+            addStudentButton.style.backgroundColor="white";
+            addStudentButton.style.color="black";
+        })
+
+
+    //ADD Subject Modal
+    const addSubjectButton = entryDiv.querySelector("#addSubjectButton");
+    console.log(addSubjectButton);
+    
+        addSubjectButton.addEventListener("click",()=>{
+            console.log(addSubjectButton.parentElement.parentElement.id);
+            
+            addSubjectModal.style.display="flex";
+            addSubjectButton.style.backgroundColor="green";
+            addSubjectButton.style.color="white";
+
+        })
+        addSubjectModalButtonBack.addEventListener("click",()=>{
+            addSubjectModal.style.display="none"
+            addSubjectButton.style.backgroundColor="white";
+            addSubjectButton.style.color="black";
+        })
+
+
+    
+  });
+});
+
+arroIcon.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const entryDiv = button.parentElement;
+    const future = entryDiv.querySelectorAll(".future");
+    const current = entryDiv.querySelectorAll(".current");
+    if (future) {
+      future.forEach((btn) => {
+        btn.classList.add("displayNone");
+      });
+      current.forEach((btn) => {
+        btn.classList.remove("displayNone");
+      });
+    }
+  });
+});
+
+
+
+
+
