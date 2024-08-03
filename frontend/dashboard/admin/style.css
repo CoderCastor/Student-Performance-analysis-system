@@ -90,7 +90,7 @@ nav{
 .leftBar{
 
     max-height: 800px;
-    /* background-color: #eeeeee55; */
+    background-color: #eeeeee55;
 
     height: 100%;
     width: 73px;
@@ -100,6 +100,8 @@ nav{
     align-items: center;
 
     font-family: "Montserrat", sans-serif;
+
+    z-index: 11;
 
     transition: all 0.4s;
 
@@ -644,7 +646,7 @@ main{
 .addClassModalBox{
     font-family: "Montserrat", sans-serif;
     background-color: white;
-    box-shadow: black 2px 2px 2px 2px;
+    box-shadow: black 8px 8px 20px;
 
     border-radius: 12px;
     height: 500px;
@@ -655,7 +657,29 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
+    animation-name: modalAnimation;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
 }
+
+
+@keyframes modalAnimation {
+    from{
+        /* height: 0%; */
+        transform: scale(.4);
+    }
+    to{
+        /* height: 100%; */
+        transform: scale(1);
+    }
+}
+
+
 .addClassImg{
     height: 200px;
     width: 250px;
@@ -664,6 +688,7 @@ main{
     height: 100%;
     width: 100%;
 }
+
 .addClassInput{
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
@@ -672,6 +697,10 @@ main{
     padding: 10px;
     height: 55px;
     width: 70%;
+
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: rgb(237, 232, 255);
 
     border-radius: 12px;
 }
