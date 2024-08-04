@@ -164,9 +164,12 @@
             <div class="addSubjectModalImg">
                 <img src="../../../assets/classroom.png" alt="">
             </div>
-            <input type="text" class="addSubjectModalinput" name="" id="" placeholder="Subject Name">
-            <input type="text" class="addSubjectModalinput" name="" id="" placeholder="Subject Code">
-            <input type="text" class="addSubjectModalinput" name="" id="" placeholder="Sessions">
+            <input type="text" class="addSubjectModalinput" name="addSubjectModalinputName" id="addSubjectModalinputName" placeholder="Subject Name">
+            <p class="validationfields" id="subNameValid">Enter Valid Name</p>
+            <input type="text" class="addSubjectModalinput" name="addSubjectModalinputCode" id="addSubjectModalinputCode" placeholder="Subject Code">
+            <p class="validationfields" id="subCodeValid">Fill valid code</p>
+            <input type="text" class="addSubjectModalinput" name="addSubjectModalinputSessions" id="addSubjectModalinputSessions" placeholder="Sessions">
+            <p class="validationfields" id="subSessionsValid">Fill valid Sessions</p>
             <button class="addSubjectModalButton" id="addSubjectModalButton">ADD SUBJECT</button>
             <button class="addSubjectModalButton" id="addSubjectModalButtonBack">GO BACK</button>
         </div>
@@ -180,8 +183,10 @@
             <div class="addStudentModalImg">
                 <img src="../../../assets/classroom.png" alt="">
             </div>
-            <input type="text" class="addStudentModalinput" name="" id="" placeholder="Student Name">
-            <input type="text" class="addStudentModalinput" name="" id="" placeholder="Student Key / ID">
+            <input type="text" class="addStudentModalinput" name="" id="addStudentModalinputName" placeholder="Student Name">
+            <p class="validationfields" id="stdNameValid">Fill this field *</p>
+            <input type="text" class="addStudentModalinput" name="addStudentModalinputKey" id="addStudentModalinputKey" placeholder="Student Key / ID">
+            <p class="validationfields" id="stdKeyValid">Fill this field *</p>
             <!-- <input type="text" class="addStudentModalinput" name="" id="" placeholder="Roll No."> -->
             <button class="addStudentModalButton" id="addStudentModalButton">ADD STUDENT</button>
             <button class="addStudentModalButton" id="addStudentModalButtonGoBack">GO BACK</button>
@@ -189,6 +194,6 @@
     </div>
 
 
-     <script src="./adminDashboard.js"></script>
+    <script type="module" src="./adminDashboard.js"></script>
 </body>
 </html>

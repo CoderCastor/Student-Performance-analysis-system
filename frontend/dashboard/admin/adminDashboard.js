@@ -1,9 +1,16 @@
+import {formValidationStudent, formValidationSubject} from '../../../backend/dashboard/admin/classes.js'
+
 var hamberBergerClick = document.querySelector(".hambergerIcon");
 var hamBerger = document.querySelector(".hamBerger");
 var leftArrow = document.querySelector(".leftArrow");
 var leftBar = document.querySelector(".leftBar");
 var labelNone = document.querySelectorAll("h3");
 var leftBarOpen;
+
+var entryID = 0;
+var addSubjectButtonGreen;
+var addStudentButtonGreen;
+
 hamberBergerClick.addEventListener("click", function () {
   leftBarOpen = true;
   hamBerger.style.backgroundColor = "white";
@@ -26,7 +33,6 @@ leftArrow.addEventListener("click", function () {
   hamBerger.style.backgroundColor = "#024f5b22";
 });
 
-
 //all options
 let option1 = document.querySelector("#option1");
 let option2 = document.querySelector("#option2");
@@ -44,8 +50,6 @@ let section4 = document.querySelector(".section4");
 let section5 = document.querySelector(".section5");
 let section6 = document.querySelector(".section6");
 let section7 = document.querySelector(".section7");
-
-
 
 section2.classList.add("class");
 option1.classList.add("lablelogoRed");
@@ -81,36 +85,36 @@ goBack.addEventListener("click", () => {
   addClass.style.backgroundColor = "red";
 });
 
-
-
 //entry
 let addButton = document.querySelectorAll(".addButton");
 let currentButton = document.querySelectorAll(".current");
 let futureButton = document.querySelectorAll(".future");
 let arroIcon = document.querySelectorAll(".arroIcon");
 
-//add Student Modal body
-let addStudentModal = document.querySelector("#addStudentModal")
-let addStudentModalButtonGoBack = document.querySelector("#addStudentModalButtonGoBack")
-addStudentModal.style.display="none";
-console.log(addStudentModal);
+
 
 //add subject modal body
-let addSubjectModal = document.querySelector("#addSubjectModal")
-let addSubjectModalButtonBack = document.querySelector("#addSubjectModalButtonBack")
-addSubjectModal.style.display="none";
-// addSubjectModal.style.display="flex";
-console.log(addSubjectModal);
+let addSubjectModal = document.querySelector("#addSubjectModal");
+let addSubjectModalButton = document.querySelector("#addSubjectModalButton");
+let addSubjectModalButtonBack = document.querySelector("#addSubjectModalButtonBack");
+addSubjectModal.style.display = "none";
+
+
+//add Student Modal body
+let addStudentModal = document.querySelector("#addStudentModal");
+let addStudentModalButton = document.querySelector("#addStudentModalButton");
+let addStudentModalButtonGoBack = document.querySelector("#addStudentModalButtonGoBack");
+addStudentModal.style.display = "none";
 
 
 
 //shift to addsubject and addstudents buttons
-addButton.forEach((button) => {  
-    button.addEventListener("click", (e) => {
-        e.preventDefault();       
-        const entryDiv = button.parentElement;
-        const future = entryDiv.querySelectorAll(".future");
-        const current = entryDiv.querySelectorAll(".current");      
+addButton.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const entryDiv = button.parentElement;
+    const future = entryDiv.querySelectorAll(".future");
+    const current = entryDiv.querySelectorAll(".current");
     if (future) {
       future.forEach((btn) => {
         btn.classList.remove("displayNone");
@@ -120,39 +124,38 @@ addButton.forEach((button) => {
       });
     }
 
-    //ADD Student Modal
-    const addStudentButton = entryDiv.querySelector("#addStudentButton");
-        addStudentButton.addEventListener("click",()=>{
-            addStudentModal.style.display="flex";
-            addStudentButton.style.backgroundColor="green";
-            addStudentButton.style.color="white";
-
-        })
-        addStudentModalButtonGoBack.addEventListener("click",()=>{
-            addStudentModal.style.display="none";
-            addStudentButton.style.backgroundColor="white";
-            addStudentButton.style.color="black";
-        })
-
 
     //ADD Subject Modal
     const addSubjectButton = entryDiv.querySelector("#addSubjectButton");
-    console.log(addSubjectButton);
+    addSubjectButtonGreen = entryDiv.querySelector("#addSubjectButton");
+
+    addSubjectButton.addEventListener("click", () => {
+      entryID = addSubjectButton.parentElement.parentElement.id
+      addSubjectModal.style.display = "flex";
+      addSubjectButton.style.backgroundColor = "green";
+      addSubjectButton.style.color = "white";
+    });
     
-        addSubjectButton.addEventListener("click",()=>{
-            console.log(addSubjectButton.parentElement.parentElement.id);
-            
-            addSubjectModal.style.display="flex";
-            addSubjectButton.style.backgroundColor="green";
-            addSubjectButton.style.color="white";
+    addSubjectModalButtonBack.addEventListener("click", () => {
+      addSubjectModal.style.display = "none";
+      addSubjectButton.style.backgroundColor = "white";
+      addSubjectButton.style.color = "black";
+    });
 
-        })
-        addSubjectModalButtonBack.addEventListener("click",()=>{
-            addSubjectModal.style.display="none"
-            addSubjectButton.style.backgroundColor="white";
-            addSubjectButton.style.color="black";
-        })
 
+    //ADD Student Modal
+    const addStudentButton = entryDiv.querySelector("#addStudentButton");
+    addStudentButtonGreen = entryDiv.querySelector("#addStudentButton");
+    addStudentButton.addEventListener("click", () => {
+      addStudentModal.style.display = "flex";
+      addStudentButton.style.backgroundColor = "green";
+      addStudentButton.style.color = "white";
+    });
+    addStudentModalButtonGoBack.addEventListener("click", () => {
+      addStudentModal.style.display = "none";
+      addStudentButton.style.backgroundColor = "white";
+      addStudentButton.style.color = "black";
+    });
 
     
   });
@@ -176,6 +179,85 @@ arroIcon.forEach((button) => {
 });
 
 
+//backend addSubject form/modal submission 
+addSubjectModalButton.addEventListener("click",()=>{	
+	let addSubjectModalinputName = document.getElementById("addSubjectModalinputName").value;
+	let addSubjectModalinputCode = document.getElementById("addSubjectModalinputCode").value;
+	let addSubjectModalinputSessions = document.getElementById("addSubjectModalinputSessions").value;
 
+	let subNameValid = document.getElementById("subNameValid");
+	let subCodeValid = document.getElementById("subCodeValid");
+	let subSessionsValid = document.getElementById("subSessionsValid");
 
+	// console.log(addSubjectModalinputName+" "+addSubjectModalinputCode+" "+addSubjectModalinputSessions+" from EID: "+entryID);
+	let displayNoneKey = formValidationSubject(addSubjectModalinputName,addSubjectModalinputCode,addSubjectModalinputSessions)
+	
+	if(displayNoneKey===1){
+		subNameValid.style.display="flex";
+	}else{
+		subNameValid.style.display="none";
+	}
+	if(displayNoneKey===2){
+		subCodeValid.style.display="flex";
+	}
+	else{
+		subCodeValid.style.display="none";
+	}
+	if(displayNoneKey===3){
+		subSessionsValid.style.display="flex";
+	}
+	else{
+		subSessionsValid.style.display="none";
+	}
+	if(displayNoneKey==0){
+		subNameValid.style.display="none";
+		subCodeValid.style.display="none";
+		subSessionsValid.style.display="none";
 
+		document.getElementById("addSubjectModalinputName").value="";
+		document.getElementById("addSubjectModalinputCode").value="";
+		document.getElementById("addSubjectModalinputSessions").value="";
+
+		addSubjectModal.style.display = "none";
+	      addSubjectButtonGreen.style.backgroundColor = "white";
+	      addSubjectButtonGreen.style.color = "black";
+	}
+
+	  
+})
+
+// backend addStudent form/modal submission
+addStudentModalButton.addEventListener("click",()=>{
+	
+	let addStudentModalinputName = document.getElementById("addStudentModalinputName").value;
+	let addStudentModalinputKey = document.getElementById("addStudentModalinputKey").value;
+	
+	let stdNameValid = document.getElementById("stdNameValid");
+	let stdKeyValid = document.getElementById("stdKeyValid");
+
+	let displayNoneKey = formValidationStudent(addStudentModalinputName,addStudentModalinputKey)
+	
+	if(displayNoneKey===1){
+		stdNameValid.style.display="flex";
+	}else{
+		stdNameValid.style.display="none";
+	}
+	if(displayNoneKey===2){
+		stdKeyValid.style.display="flex";
+	}
+	else{
+		stdKeyValid.style.display="none";
+	}
+	if(displayNoneKey==0){
+		stdNameValid.style.display="none";
+		stdKeyValid.style.display="none";
+
+		document.getElementById("addStudentModalinputName").value="";
+		document.getElementById("addStudentModalinputKey").value="";
+
+		addStudentModal.style.display = "none";
+	      addStudentButtonGreen.style.backgroundColor = "white";
+	      addStudentButtonGreen.style.color = "black";
+	}
+	  
+})
