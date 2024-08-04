@@ -665,9 +665,25 @@ main{
     cursor: pointer;
 }
 
+
+#addClassButton2{
+    border: solid 1.4px;
+}
+
+#addClassButton2:hover{
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
+
+    transition: all .1s;
+}
+
 #addClassButton1{
     background-color: rgb(0, 0, 109);
     color: white;
+}
+
+#addClassButton1:hover{
+    background-color: rgba(0, 0, 109, 0.705);
 }
 
 /* addSubject Modal */
@@ -771,8 +787,6 @@ main{
 
     cursor: pointer;
 }
-
-
 
 #addSubjectModalButtonBack{
     border: solid 1.4px;

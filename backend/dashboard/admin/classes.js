@@ -21,3 +21,10 @@ export function formValidationStudent(name,stdkey){
     }
     return 0;
 }
+
+export function formValidationClass(name){
+    if(name==""){
+        return 1;
+    }
+    return 0;
+}

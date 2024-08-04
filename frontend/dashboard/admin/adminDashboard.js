@@ -1,4 +1,4 @@
-import {formValidationStudent, formValidationSubject} from '../../../backend/dashboard/admin/classes.js'
+import {formValidationStudent, formValidationSubject,formValidationClass} from '../../../backend/dashboard/admin/classes.js'
 
 var hamberBergerClick = document.querySelector(".hambergerIcon");
 var hamBerger = document.querySelector(".hamBerger");
@@ -87,8 +87,6 @@ goBack.addEventListener("click", () => {
 
 //entry
 let addButton = document.querySelectorAll(".addButton");
-let currentButton = document.querySelectorAll(".current");
-let futureButton = document.querySelectorAll(".future");
 let arroIcon = document.querySelectorAll(".arroIcon");
 
 
@@ -178,6 +176,28 @@ arroIcon.forEach((button) => {
   });
 });
 
+
+////backend addClass form/modal submission
+let addClassButton1 = document.querySelector("#addClassButton1");
+addClassButton1.addEventListener("click",()=>{
+	let addClassInput = document.getElementById("addClassInput").value;
+	
+	let classNameValid = document.getElementById("classNameValid");
+
+	let displayNoneKey = formValidationClass(addClassInput);
+
+	if(displayNoneKey==1){
+		classNameValid.style.display="flex";
+	}else{
+		classNameValid.style.display="none";
+	}
+	if(displayNoneKey==0){
+		subSection2.style.display = "none";
+		document.getElementById("addClassInput").value="";
+  		addClass.style.backgroundColor = "red";
+
+	}
+})
 
 //backend addSubject form/modal submission 
 addSubjectModalButton.addEventListener("click",()=>{	
