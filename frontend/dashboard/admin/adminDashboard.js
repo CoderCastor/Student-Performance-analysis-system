@@ -281,3 +281,7 @@ addStudentModalButton.addEventListener("click",()=>{
 	}
 	  
 })
+
+
+let a=12;
+let b= 17;
