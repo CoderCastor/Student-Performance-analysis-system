@@ -88,8 +88,17 @@ goBack.addEventListener("click", () => {
 //entry
 let addButton = document.querySelectorAll(".addButton");
 let arroIcon = document.querySelectorAll(".arroIcon");
+let entryViewButton = document.querySelectorAll(".entryViewButton");
 
-
+entryViewButton.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const entryDiv = button.parentElement.parentElement.id;
+    console.log(entryDiv);
+    Section3.style.display="flex";
+    section2.classList.add("class");
+  })
+})    
 
 //add subject modal body
 let addSubjectModal = document.querySelector("#addSubjectModal");
@@ -283,5 +292,70 @@ addStudentModalButton.addEventListener("click",()=>{
 })
 
 
-let a=12;
-let b= 17;
+//VIEW SECTIONS SECTIONS
+
+var Section3 = document.querySelector(".Section3");
+
+//ALL SECTIONS
+let detailsSection = document.querySelector(".detailsSection");
+let subjectsSection = document.querySelector(".subjectsSection");
+let studentsSection = document.querySelector(".studentsSection");
+let teachersSection = document.querySelector(".teachersSection");
+
+//buttons --->
+let menuElementView1 = document.querySelector(".menuElementView1");
+let menuElementView2 = document.querySelector(".menuElementView2");
+let menuElementView3 = document.querySelector(".menuElementView3");
+let menuElementView4 = document.querySelector(".menuElementView4");
+
+// initial
+detailsSection.style.display="flex";
+menuElementView1.classList.add('menuElementViewSelect');
+
+menuElementView1.addEventListener("click",()=>{
+  menuElementView1.classList.add('menuElementViewSelect');
+  menuElementView2.classList.remove('menuElementViewSelect');
+  menuElementView3.classList.remove('menuElementViewSelect');
+  menuElementView4.classList.remove('menuElementViewSelect');
+
+  detailsSection.style.display="flex";
+  subjectsSection.style.display="none";
+  studentsSection.style.display="none";
+  teachersSection.style.display="none";
+})
+
+menuElementView2.addEventListener("click",()=>{
+  menuElementView1.classList.remove('menuElementViewSelect');
+  menuElementView2.classList.add('menuElementViewSelect');
+  menuElementView3.classList.remove('menuElementViewSelect');
+  menuElementView4.classList.remove('menuElementViewSelect');
+
+  detailsSection.style.display="none";
+  subjectsSection.style.display="flex";
+  studentsSection.style.display="none";
+  teachersSection.style.display="none";
+})
+
+menuElementView3.addEventListener("click",()=>{
+  menuElementView1.classList.remove('menuElementViewSelect');
+  menuElementView2.classList.remove('menuElementViewSelect');
+  menuElementView3.classList.add('menuElementViewSelect');
+  menuElementView4.classList.remove('menuElementViewSelect');
+
+  detailsSection.style.display="none";
+  subjectsSection.style.display="none";
+  studentsSection.style.display="flex";
+  teachersSection.style.display="none";
+})
+
+menuElementView4.addEventListener("click",()=>{
+  menuElementView1.classList.remove('menuElementViewSelect');
+  menuElementView2.classList.remove('menuElementViewSelect');
+  menuElementView3.classList.remove('menuElementViewSelect');
+  menuElementView4.classList.add('menuElementViewSelect');
+
+  detailsSection.style.display="none";
+  subjectsSection.style.display="none";
+  studentsSection.style.display="none";
+  teachersSection.style.display="flex";
+})

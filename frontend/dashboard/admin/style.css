@@ -236,7 +236,6 @@ main{
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 
-    display: none;
 }
 
 @keyframes homeAnimation {
@@ -341,8 +340,6 @@ main{
     
     display: flex;
     flex-direction: column;
-
-    display: none;
 }
 
 .classTitileBar{
@@ -368,6 +365,10 @@ main{
     padding: 0% 4%;
 
 
+}
+
+.barLabelClass{
+    min-width: 100px;
 }
 
 .addClassButtonBar{
@@ -466,7 +467,7 @@ main{
 }
 
 .classAlpla{
-    width: 30px;
+    min-width: 100px;
     height: 40%;
 
     display: flex;
@@ -974,7 +975,7 @@ main{
 .Section3{
     background-color: rgb(255, 255, 255);
 
-    display: flex;
+    display: none;
     flex-direction: column;
 
     padding: 10px;
@@ -982,7 +983,6 @@ main{
     width: 100%;
     z-index: 14;
 
-    display: flex;
 }
 
 .menuBarView{
@@ -1016,7 +1016,7 @@ main{
     cursor: pointer;
 }
 
-.menuElementView1{
+.menuElementViewSelect{
     background-color: #009788;
     color: rgb(255, 255, 255);
     box-shadow: inset rgb(255, 255, 255) 2px 2px 5px;
@@ -1211,7 +1211,7 @@ main{
 .studentsSection{
     flex-grow: 1;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -1351,5 +1351,153 @@ main{
 }
 
 #viewStudentsTableFlexActionsButton:hover{
+    background-color: rgba(0, 0, 72, 0.725);
+}
+
+/* teachers section */
+.teachersSection{
+    flex-grow: 1;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.teachersSectionBox{
+    background-color: white;
+
+    height: 95%;
+    max-height: 100%;
+    width: 70%;
+}
+
+.viewTeachersTitleBar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 60px;
+}
+
+.viewTeachersTitleBar p{
+    color: white;
+    background-color: rgba(197, 0, 0, 0.805);
+    height: 90%;
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px 40px 40px 8px;
+}
+
+
+.viewTeachersTable{
+    background-color: rgb(247, 248, 255);
+    color: white;
+
+    height: 90%;
+    width: 100%;
+}
+
+.viewTeachersTableRowsHeader{
+
+    width: 100%;
+    height: 9%;
+
+    display: flex;
+    justify-content: space-around;
+
+    background-color: black;
+}
+
+.viewTeachersTableFlexHeader{
+    font-size: 16px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewTeachersTableFlexHeaderName{
+    min-width: 240px;
+}
+
+.viewTeachersTableRows{
+    width: 100%;
+    height: 10%;
+
+    margin: 1px 0px;
+
+    display: flex;
+    justify-content: space-around;
+
+    background-color: rgb(231, 231, 231);
+}
+
+.viewTeachersTableFlex{
+    font-size: 16px;
+    height: 100%;
+    
+
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewTeachersTableFlexName{
+    min-width: 240px;
+}
+
+.viewTeachersTableFlexActions{
+    font-size: 16px;
+    height: 100%;
+    min-width: 216px;
+
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.viewTeachersTableFlexActionsButton{
+    padding:12px 8px;
+    border-radius: 18px;
+
+    border: none;
+}
+
+.viewTeachersTableFlexHeaderA{
+    font-size: 16px;
+    height: 100%;
+    min-width: 216px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewTeachersTableFlexHeaderRoll{
+    min-width: 80px;
+}
+
+.viewTeachersTableFlexRoll{
+    min-width: 80px;
+}
+
+#viewTeachersTableFlexActionsButton{
+    background-color: rgba(0, 0, 32, 0.89);
+    color: white;
+}
+
+#viewTeachersTableFlexActionsButton:hover{
     background-color: rgba(0, 0, 72, 0.725);
 }
