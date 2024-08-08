@@ -44,8 +44,8 @@ let option7 = document.querySelector("#option7");
 
 // all sections
 let section1 = document.querySelector(".section1");
-let section2 = document.querySelector(".section2");
-let section3 = document.querySelector(".section3");
+var section2 = document.querySelector(".section2");
+var section3 = document.querySelector(".section3");
 let section4 = document.querySelector(".section4");
 let section5 = document.querySelector(".section5");
 let section6 = document.querySelector(".section6");
@@ -57,9 +57,11 @@ option1.classList.add("lablelogoRed");
 option1.addEventListener("click", () => {
   option1.classList.add("lablelogoRed");
   option2.classList.remove("lablelogoRed");
+  Section3.style.display="none";
 
   section1.classList.remove("class");
   section2.classList.add("class");
+  section2.style.display="none";
 });
 
 option2.addEventListener("click", () => {
@@ -67,7 +69,8 @@ option2.addEventListener("click", () => {
   option2.classList.add("lablelogoRed");
 
   section1.classList.add("class");
-  section2.classList.remove("class");
+  // section2.classList.remove("class");
+  section2.style.display="flex";
 });
 
 //Modals addClassModal
@@ -96,7 +99,8 @@ entryViewButton.forEach((button) => {
     const entryDiv = button.parentElement.parentElement.id;
     console.log(entryDiv);
     Section3.style.display="flex";
-    section2.classList.add("class");
+    // section2.classList.add("class");
+    section2.style.display="none";
   })
 })    
 
@@ -303,6 +307,7 @@ let studentsSection = document.querySelector(".studentsSection");
 let teachersSection = document.querySelector(".teachersSection");
 
 //buttons --->
+let menuElementView0 = document.querySelector(".menuElementView0");
 let menuElementView1 = document.querySelector(".menuElementView1");
 let menuElementView2 = document.querySelector(".menuElementView2");
 let menuElementView3 = document.querySelector(".menuElementView3");
@@ -311,6 +316,13 @@ let menuElementView4 = document.querySelector(".menuElementView4");
 // initial
 detailsSection.style.display="flex";
 menuElementView1.classList.add('menuElementViewSelect');
+
+menuElementView0.addEventListener("click",()=>{
+  Section3.style.display="none";
+  section2.style.display="flex";
+
+  
+})
 
 menuElementView1.addEventListener("click",()=>{
   menuElementView1.classList.add('menuElementViewSelect');
@@ -359,3 +371,4 @@ menuElementView4.addEventListener("click",()=>{
   studentsSection.style.display="none";
   teachersSection.style.display="flex";
 })
+

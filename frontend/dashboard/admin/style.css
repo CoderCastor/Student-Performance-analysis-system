@@ -1501,3 +1501,13 @@ main{
 #viewTeachersTableFlexActionsButton:hover{
     background-color: rgba(0, 0, 72, 0.725);
 }
+
+.menuElementView0{
+    border: none;
+}
+
+.menuElementView0:hover{
+    background-color: #009788;
+    color: rgb(255, 255, 255);
+    box-shadow: inset rgb(255, 255, 255) 2px 2px 5px;
+}
