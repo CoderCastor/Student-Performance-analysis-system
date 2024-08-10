@@ -46,7 +46,7 @@ let option7 = document.querySelector("#option7");
 let section1 = document.querySelector(".section1");
 var section2 = document.querySelector(".section2");
 var section3 = document.querySelector(".section3");
-let section4 = document.querySelector(".section4");
+var section4 = document.querySelector("#section4");
 let section5 = document.querySelector(".section5");
 let section6 = document.querySelector(".section6");
 let section7 = document.querySelector(".section7");
@@ -57,21 +57,43 @@ option1.classList.add("lablelogoRed");
 option1.addEventListener("click", () => {
   option1.classList.add("lablelogoRed");
   option2.classList.remove("lablelogoRed");
-  Section3.style.display="none";
+  option3.classList.remove("lablelogoRed");
 
-  section1.classList.remove("class");
-  section2.classList.add("class");
-  section2.style.display="none";
+
+  section1.style.display="flex";
+  section2.style.display=none;
+  section3.style.display="none";
+
+  section4.style.display="none";
 });
 
 option2.addEventListener("click", () => {
   option1.classList.remove("lablelogoRed");
   option2.classList.add("lablelogoRed");
+  option3.classList.remove("lablelogoRed");
 
   section1.classList.add("class");
   // section2.classList.remove("class");
   section2.style.display="flex";
+
+  
+
+  section4.style.display="none";
 });
+
+option3.addEventListener("click",()=>{
+
+  option1.classList.remove("lablelogoRed");
+  option2.classList.remove("lablelogoRed");
+  option3.classList.add("lablelogoRed");
+
+    section1.style.display="none";
+    section2.style.display="none";
+
+
+    
+    section4.style.display="flex";
+})
 
 //Modals addClassModal
 let subSection2 = document.querySelector(".addClassModal");

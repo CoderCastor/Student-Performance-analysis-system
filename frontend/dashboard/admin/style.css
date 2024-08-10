@@ -222,7 +222,7 @@ main{
 .section1{
     flex-grow: 1;
 
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -1518,7 +1518,7 @@ main{
 .section4{
     background-color: rgb(255, 255, 255);
 
-    display: flex;
+    display: none;
     flex-direction: column;
 
     padding: 10px;
@@ -1575,3 +1575,4 @@ main{
     font-weight: 800;
     font-size: 15px;
 }
+
